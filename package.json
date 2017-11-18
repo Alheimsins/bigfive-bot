@@ -1,0 +1,32 @@
+{
+  "name": "bigfive-bot",
+  "version": "1.0.0",
+  "description": "a bot for taking big five tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "deploy": "npm test && now && now alias",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alheimsins/bigfive-bot.git"
+  },
+  "author": "Geir Gåsodden <geir.gasodden@pythonia.no> (https://github.com/zrrrzzt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alheimsins/bigfive-bot/issues"
+  },
+  "homepage": "https://github.com/Alheimsins/bigfive-bot#readme",
+  "devDependencies": {
+    "ava": "0.23.0",
+    "coveralls": "3.0.0",
+    "nsp": "3.1.0",
+    "nyc": "11.3.0",
+    "standard": "10.0.3"
+  }
+}
