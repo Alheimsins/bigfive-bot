@@ -1,3 +1,4 @@
+
 const restify = require('restify')
 const builder = require('botbuilder')
 
@@ -18,5 +19,20 @@ server.post('/api/messages', connector.listen())
 
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
 const bot = new builder.UniversalBot(connector, session => {
-  session.send('You said: %s', session.message.text)
+  session.beginDialog('selectLanguange')
 })
+
+bot.dialog('bigfive', () => [
+  function (session) {
+    session.beginDialog('selectLanguange')
+  }
+])
+
+bot.dialog('selectLanguange', [
+  function (session) {
+    builder.Prompts.text(session, 'Please select language')
+  },
+  function (session, results) {
+    session.endDialogWithResult(results)
+  }
+])
