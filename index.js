@@ -1,4 +1,3 @@
-
 const restify = require('restify')
 const builder = require('botbuilder')
 
@@ -18,11 +17,11 @@ const connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen())
 
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
-const bot = new builder.UniversalBot(connector, session => {
-  session.beginDialog('selectLanguange')
+const bot = new builder.UniversalBot(connector, function (session) {
+  session.beginDialog('bigfive')
 })
 
-bot.dialog('bigfive', () => [
+bot.dialog('bigfive', [
   function (session) {
     session.beginDialog('selectLanguange')
   }
@@ -33,6 +32,8 @@ bot.dialog('selectLanguange', [
     builder.Prompts.text(session, 'Please select language')
   },
   function (session, results) {
+    console.log(results)
+    session.send(`You selected ${results.response}`)
     session.endDialogWithResult(results)
   }
 ])
