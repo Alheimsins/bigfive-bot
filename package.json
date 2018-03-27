@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "botbuilder": "3.14.1",
-    "restify": "7.0.0"
+    "restify": "7.1.0"
   }
 }
