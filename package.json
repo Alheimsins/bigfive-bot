@@ -30,7 +30,7 @@
     "standard": "12.0.1"
   },
   "dependencies": {
-    "botbuilder": "4.0.6",
+    "botbuilder": "4.0.8",
     "restify": "7.2.1"
   }
 }
