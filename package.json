@@ -27,7 +27,7 @@
     "ava": "2.3.0",
     "coveralls": "3.0.6",
     "nyc": "14.1.1",
-    "standard": "14.0.2"
+    "standard": "14.1.0"
   },
   "dependencies": {
     "botbuilder": "4.3.4",
