@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "botbuilder": "4.6.2",
-    "restify": "8.4.0"
+    "restify": "8.4.1"
   },
   "engines": {
     "node": ">=10.15.0"
