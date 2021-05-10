@@ -30,7 +30,7 @@
     "standard": "16.0.3"
   },
   "dependencies": {
-    "botbuilder": "4.13.1",
+    "botbuilder": "4.13.2",
     "restify": "8.5.1"
   },
   "engines": {
